@@ -1,0 +1,111 @@
+debug.c: In function 'main':
+debug.c:27:5: error: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Werror=format=]
+     scanf("%d", numStudents);
+     ^
+debug.c:30:5: error: unknown type name 'studnet'
+     studnet * students = getData(numStudents);
+     ^
+debug.c:30:26: error: initialization from incompatible pointer type [-Werror]
+     studnet * students = getData(numStudents);
+                          ^
+debug.c:33:5: error: 'numFailes' undeclared (first use in this function)
+     numFailes = getNumFails(students, numStudents);
+     ^
+debug.c:33:5: note: each undeclared identifier is reported only once for each function it appears in
+debug.c:33:29: error: passing argument 1 of 'getNumFails' from incompatible pointer type [-Werror]
+     numFailes = getNumFails(students, numStudents);
+                             ^
+debug.c:20:5: note: expected 'struct student *' but argument is of type 'int *'
+ int getNumFails(student * students, int numStudents);
+     ^
+debug.c:34:9: error: 'numFails' undeclared (first use in this function)
+     if (numFails = 0) {
+         ^
+debug.c:41:5: error: implicit declaration of function 'getprize' [-Werror=implicit-function-declaration]
+     int winner = getprize(students, numStudents);
+     ^
+debug.c:42:5: error: implicit declaration of function 'print' [-Werror=implicit-function-declaration]
+     print("The winner is z%d\n"", &winner);
+     ^
+debug.c:42:32: error: missing terminating " character [-Werror]
+     print("The winner is z%d\n"", &winner);
+                                ^
+debug.c:42:5: error: missing terminating " character
+     print("The winner is z%d\n"", &winner);
+     ^
+debug.c:44:5: error: expected ')' before 'free'
+     free(students);
+     ^
+debug.c:45:1: error: expected ';' before '}' token
+ }
+ ^
+debug.c:41:9: error: unused variable 'winner' [-Werror=unused-variable]
+     int winner = getprize(students, numStudents);
+         ^
+debug.c: In function 'getData':
+debug.c:52:61: error: expected ',' or ';' before ')' token
+     student * students = malloc(sizeof(student)*numStudents));
+                                                             ^
+debug.c:53:5: error: implicit declaration of function 'assert' [-Werror=implicit-function-declaration]
+     assert(student != NULL);
+     ^
+debug.c:53:12: error: expected expression before 'student'
+     assert(student != NULL);
+            ^
+debug.c:57:16: error: 'size' undeclared (first use in this function)
+     while (i < size) {
+                ^
+debug.c:60:30: error: request for member 'zid' in something not a structure or union
+         scanf("%d", &students.zid[i]);
+                              ^
+debug.c:63:9: error: unknown type name 'itn'
+         itn numCourses;
+         ^
+debug.c:65:22: error: 'numCOurses' undeclared (first use in this function)
+         scanf("%d", &numCOurses);
+                      ^
+debug.c:75:13: error: format '%f' expects argument of type 'float *', but argument 2 has type 'double *' [-Werror=format=]
+             scanf("%f", &marks[j]);
+             ^
+debug.c:76:30: error: value computed is not used [-Werror=unused-value]
+             assert(marks[j]) <= 100);
+                              ^
+debug.c:76:36: error: expected ';' before ')' token
+             assert(marks[j]) <= 100);
+                                    ^
+debug.c:76:36: error: expected statement before ')' token
+debug.c:80:27: error: too many arguments to function 'calcAvg'
+         students[i].wam = calcAvg(marks, numCourses);
+                           ^
+debug.c:18:8: note: declared here
+ double calcAvg(double marks[MAX_COURSES]);
+        ^
+debug.c:83:9: error: expected ';' before 'i'
+         i++;
+         ^
+debug.c: At top level:
+debug.c:90:8: error: conflicting types for 'calcAvg'
+ double calcAvg(double marks[], int size) {
+        ^
+debug.c:18:8: note: previous declaration of 'calcAvg' was here
+ double calcAvg(double marks[MAX_COURSES]);
+        ^
+debug.c: In function 'getNumFails':
+debug.c:115:21: error: request for member 'wam' in something not a structure or union
+         if (students.wam[i] < PS) {
+                     ^
+debug.c:116:13: error: 'count' undeclared (first use in this function)
+             count++;
+             ^
+debug.c: In function 'getPrize':
+debug.c:135:33: error: 'student' has no member named 'zID'
+             winner = students[i].zID;
+                                 ^
+debug.c:141:5: error: expected declaration or statement at end of input
+     return winner;
+     ^
+debug.c: In function 'main':
+debug.c:45:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
